@@ -13,6 +13,10 @@ const Hero = () => {
                     <span className="text-primary font-semibold tracking-wider text-sm uppercase">Season 1 Live Now</span>
                 </div>
 
+                <div className="mb-8 relative w-40 h-40 mx-auto rounded-full overflow-hidden border-4 border-primary/50 shadow-[0_0_30px_rgba(16,185,129,0.3)] animate-float">
+                    <img src="/logo.jpg" alt="Alfikz SMP Logo" className="w-full h-full object-cover" />
+                </div>
+
                 <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-transparent bg-clip-text bg-gradient-to-b from-white to-gray-400 mb-6 drop-shadow-xl">
                     Alfikz SMP
                 </h1>
