@@ -32,9 +32,16 @@ const Footer = () => {
                     </a>
                 </div>
 
-                <div className="text-gray-500 text-sm">
-                    &copy; {new Date().getFullYear()} Alfikz SMP. All rights reserved. <br />
-                    Not affiliated with Mojang Studios.
+                <div className="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-white/10 w-full">
+                    <p className="text-gray-500 text-sm mb-4 md:mb-0">
+                        &copy; {new Date().getFullYear()} Alfikz SMP. All rights reserved. <br />
+                        Not affiliated with Mojang Studios.
+                    </p>
+                    <div className="flex gap-6 text-sm text-gray-500">
+                        <a href="/terms" className="hover:text-primary transition-colors">Terms of Service</a>
+                        <a href="/privacy" className="hover:text-primary transition-colors">Privacy Policy</a>
+                        <a href="/cookie-policy" className="hover:text-primary transition-colors">Cookie Policy</a>
+                    </div>
                 </div>
             </div>
         </footer>

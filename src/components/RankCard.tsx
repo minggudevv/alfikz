@@ -2,16 +2,20 @@ import React from 'react';
 
 interface RankCardProps {
     name: string;
-    price: string;
+    price: number;
+    billingCycle: 'monthly' | 'season';
     color: string;
     features: string[];
     icon?: string;
     popular?: boolean;
 }
 
-const RankCard: React.FC<RankCardProps> = ({ name, price, color, features, icon, popular }) => {
+const RankCard: React.FC<RankCardProps> = ({ name, price, billingCycle, color, features, icon, popular }) => {
     const borderColor = popular ? `border-${color}` : 'border-white/10';
     const shadowColor = popular ? `shadow-[0_0_30px_${color}40]` : '';
+
+    const formattedPrice = (price / 1000).toFixed(0) + 'K';
+    const billingText = billingCycle === 'season' ? 'Until End of Season' : 'per Month';
 
     return (
         <div
@@ -32,9 +36,12 @@ const RankCard: React.FC<RankCardProps> = ({ name, price, color, features, icon,
                     <i className={`fas ${icon || 'fa-crown'}`}></i>
                 </div>
                 <h3 className="text-2xl font-bold mb-2" style={{ color: color }}>{name}</h3>
-                <div className="flex items-baseline justify-center gap-1">
-                    <span className="text-sm text-gray-400">IDR</span>
-                    <span className="text-4xl font-bold text-white">{price}</span>
+                <div className="flex flex-col items-center justify-center gap-0">
+                    <div className="flex items-baseline gap-1">
+                        <span className="text-sm text-gray-400">IDR</span>
+                        <span className="text-4xl font-bold text-white">{formattedPrice}</span>
+                    </div>
+                    <span className="text-xs text-gray-500 uppercase tracking-wide">{billingText}</span>
                 </div>
             </div>
 
@@ -51,14 +58,19 @@ const RankCard: React.FC<RankCardProps> = ({ name, price, color, features, icon,
 
             <div className="mt-8">
                 <a
-                    href={`https://wa.me/6285283123145?text=Halo%20Admin,%20saya%20ingin%20membeli%20rank%20${name}%20seharga%20${price}`}
+                    href={`https://wa.me/6285283123145?text=Halo%20Admin,%20saya%20ingin%20membeli%20rank%20${name}%20(${billingCycle})%20seharga%20${formattedPrice}`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-full py-3 rounded-xl font-bold transition-all transform active:scale-95 block text-center hover:opacity-90"
+                    className="w-full py-3 rounded-xl font-bold transition-all transform active:scale-95 block text-center hover:opacity-90 mb-3"
                     style={{ backgroundColor: color, color: '#000' }}
                 >
                     Buy via WhatsApp
                 </a>
+                <p className="text-[10px] text-center text-gray-500 leading-tight">
+                    By purchasing, you agree to our <a href="/terms" className="underline hover:text-gray-300">Terms</a> & <a href="/privacy" className="underline hover:text-gray-300">Privacy</a>.
+                    <br />
+                    <span className="text-red-400 font-semibold">NO REFUNDS.</span>
+                </p>
             </div>
         </div>
     );
