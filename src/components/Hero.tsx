@@ -28,13 +28,13 @@ const Hero = () => {
                 <div className="flex flex-col sm:flex-row gap-5 justify-center items-center mb-12">
                     <button
                         onClick={() => {
-                            navigator.clipboard.writeText('play.alfikzsmp.my.id');
+                            navigator.clipboard.writeText('play.alfikz.my.id');
                             alert('IP Copied!');
                         }}
                         className="group relative px-8 py-4 bg-primary hover:bg-primary/90 text-white font-bold rounded-xl transition-all transform hover:-translate-y-1 shadow-[0_0_20px_rgba(16,185,129,0.3)] hover:shadow-[0_0_30px_rgba(16,185,129,0.5)] w-full sm:w-auto overflow-hidden cursor-pointer"
                     >
                         <span className="relative z-10 flex items-center justify-center gap-2">
-                            <i className="fas fa-copy text-sm"></i> Copy IP: play.alfikzsmp.my.id
+                            <i className="fas fa-copy text-sm"></i> Copy IP: play.alfikz.my.id
                         </span>
                         <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:animate-shimmer"></div>
                     </button>
@@ -48,7 +48,7 @@ const Hero = () => {
                     <div className="flex flex-col items-center">
                         <i className="fas fa-server text-primary text-2xl mb-2"></i>
                         <span className="text-gray-400 text-sm uppercase tracking-wider">Server IP</span>
-                        <span className="text-white font-bold">play.alfikzsmp.my.id</span>
+                        <span className="text-white font-bold">play.alfikz.my.id</span>
                     </div>
                     <div className="flex flex-col items-center border-t md:border-t-0 md:border-l border-white/10 pt-4 md:pt-0">
                         <i className="fas fa-network-wired text-accent text-2xl mb-2"></i>
