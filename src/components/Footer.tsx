@@ -30,6 +30,14 @@ const Footer = () => {
                     >
                         <i className="fab fa-youtube text-xl"></i>
                     </a>
+                    <a
+                        href="https://minecraft-mp.com/server/350419/vote/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="w-12 h-12 rounded-full bg-green-600 flex items-center justify-center text-white hover:bg-green-700 transition-colors shadow-lg hover:shadow-green-600/50"
+                    >
+                        <i className="fas fa-check-to-slot text-xl"></i>
+                    </a>
                 </div>
 
                 <div className="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-white/10 w-full">

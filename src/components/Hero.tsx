@@ -42,6 +42,9 @@ const Hero = () => {
                     <a href="#ranks" className="px-8 py-4 bg-white/5 hover:bg-white/10 text-white font-bold rounded-xl transition-all border border-white/10 backdrop-blur-sm w-full sm:w-auto flex items-center justify-center gap-2 hover:border-primary/50">
                         <i className="fas fa-gem text-accent"></i> View Ranks
                     </a>
+                    <a href="https://minecraft-mp.com/server/350419/vote/" target="_blank" rel="noopener noreferrer" className="px-8 py-4 bg-white/5 hover:bg-white/10 text-white font-bold rounded-xl transition-all border border-white/10 backdrop-blur-sm w-full sm:w-auto flex items-center justify-center gap-2 hover:border-primary/50">
+                        <i className="fas fa-check-to-slot text-green-400"></i> Vote Now
+                    </a>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-center max-w-3xl mx-auto bg-black/30 backdrop-blur-md p-6 rounded-2xl border border-white/5">
