@@ -19,7 +19,7 @@ const RankCard: React.FC<RankCardProps> = ({ name, price, billingCycle, color, f
 
     return (
         <div
-            className={`relative flex flex-col p-6 rounded-2xl bg-white/5 backdrop-blur-sm border ${borderColor} ${shadowColor} transition-all duration-300 hover:transform hover:-translate-y-2 hover:bg-white/10 h-full`}
+            className={`relative flex flex-col p-6 rounded-2xl bg-white/5 backdrop-blur-sm border ${borderColor} ${shadowColor} transition-all duration-300 hover:transform hover:-translate-y-2 hover:bg-white/10 h-full snow-cap`}
             style={{ borderColor: popular ? color : undefined }}
         >
             {popular && (
